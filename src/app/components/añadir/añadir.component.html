@@ -1,0 +1,33 @@
+<div class="submit-form">
+  <div *ngIf="!submitted">
+    <div class="form-group">
+      <label for="title">Titulo</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        required
+        [(ngModel)]="librosAngularJuanmi.title"
+        name="title"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="autor">Autor</label>
+      <input
+        class="form-control"
+        id="autor"
+        required
+        [(ngModel)]="librosAngularJuanmi.autor"
+        name="autor"
+      />
+    </div>
+
+    <button (click)="savelibrosAngularJuanmi()" class="btn btn-success">Añadir</button>
+  </div>
+
+  <div *ngIf="submitted">
+    <h4>Se ha añadido correctamente!</h4>
+    <a href="#" class="navbar-brand">Volver</a>
+  </div>
+</div>
